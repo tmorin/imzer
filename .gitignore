@@ -1,4 +1,5 @@
-node_modules
-.idea
-coverage
-lib
+node_modules/
+.idea/
+coverage/
+lib/
+public/

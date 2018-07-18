@@ -1,0 +1,12 @@
+{
+  "hosting": {
+    "public": "/rc",
+    "ignore": [],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
+    ]
+  }
+}
