@@ -17,12 +17,12 @@ module.exports = {
     module: {
         rules: [
             {test: /\.js$/, exclude: /node_modules/, loader: ['babel-loader']},
-            {test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=25000'},
-            {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff'},
-            {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/font-woff'},
-            {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=application/octet-stream'},
-            {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000'},
-            {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=10000&mimetype=image/svg+xml'},
+            {test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=1000'},
+            {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=1000&mimetype=application/font-woff'},
+            {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=1000&mimetype=application/font-woff'},
+            {test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=1000&mimetype=application/octet-stream'},
+            {test: /\.eot(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=1000'},
+            {test: /\.svg(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=1000&mimetype=image/svg+xml'},
         ]
     },
     plugins: [
@@ -34,7 +34,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: 'src/index.ejs',
             pkg: pkg,
-            excludeChunks: ['background', 'sw']
+            excludeChunks: ['background', 'service-worker'],
+            hash: true
         })
     ]
 };

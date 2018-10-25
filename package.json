@@ -4,9 +4,11 @@
   "description": "imzer will help you to quickly share your location as well as to locate where the other guy is.",
   "scripts": {
     "web-ext": "web-ext run",
-    "watch": "webpack-dev-server --config webpack.dev.js",
+    "b:watch": "webpack --config webpack.prod.js --watch",
+    "s:watch": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "package": "rm -f imzer.zip && cd public && zip -r ../imzer.zip *"
+    "package": "rm -f imzer.zip && cd public && zip -r ../imzer.zip *",
+    "release": "standard-version"
   },
   "repository": {
     "type": "git",
