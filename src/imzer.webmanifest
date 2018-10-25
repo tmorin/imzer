@@ -1,0 +1,26 @@
+{
+  "name": "imzer",
+  "short_name": "imzer",
+  "start_url": ".",
+  "display": "standalone",
+  "lang": "en-US",
+  "background_color": "#fff",
+  "description": "imzer will help you to quickly share your location as well as to locate where the other guy is.",
+  "icons": [
+    {
+      "src": "icons/imzer-64.png",
+      "sizes": "64x64",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/imzer-128.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/imzer-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

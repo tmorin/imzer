@@ -1,0 +1,77 @@
+@import "../node_modules/leaflet/dist/leaflet.css";
+
+$fa-font-path: "../node_modules/@fortawesome/fontawesome-free/webfonts";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/fontawesome";
+@import "../node_modules/@fortawesome/fontawesome-free/scss/solid";
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  height: 100%;
+  margin: 0;
+}
+
+#map {
+  flex-grow: 1;
+  width: 100%;
+  min-height: 200px;
+  min-width: 200px;
+}
+
+.leaflet-control-flashmessage {
+  background: rgba(10, 10, 10, 0.5);
+  color: rgba(255, 255, 255, 1);
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 200%;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.leaflet-control-flashmessage-opened {
+  opacity: 1;
+}
+
+a.leaflet-control-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  width: 30px;
+  height: 30px;
+  text-decoration: none;
+  color: black;
+  background: #fff no-repeat 50% 50%;
+  background-clip: padding-box;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+a.leaflet-control-button[disabled] {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+a.leaflet-control-mylocation-started i, a.leaflet-control-centermap-started i {
+  animation: pulsate 1s ease-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulsate {
+  0% {
+    transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    transform: scale(1.2, 1.2);
+    opacity: 0.0;
+  }
+}
