@@ -9,10 +9,6 @@ import './OtherLocationInitializer';
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('service-worker.js');
-    }
-
     const m = map('map', {
         center: [0, 0],
         zoom: 3,

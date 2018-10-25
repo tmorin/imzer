@@ -1,5 +1,5 @@
-const APP_CACHE = 'APP-v1.2.1';
-const TILES_CACHE = 'TILES-v1';
+const APP_CACHE = 'APP-v1.2.2';
+const TILES_CACHE = 'TILES-v1.2.2';
 
 self.addEventListener('install', function (event) {
     console.log('sw', 'install');
@@ -19,7 +19,6 @@ self.addEventListener('install', function (event) {
                     'images/marker-icon-2x.png',
                     'images/marker-shadow.png',
                     'imzer.webmanifest',
-                    'index.html',
                     'index.js',
                     'manifest.json',
                     'robot.txt'
