@@ -46,15 +46,23 @@ L.Map.addInitHook(function () {
         // handle disabled according to mylocationn result
         var a = control.getContainer().querySelector('a');
         if (evt.latlng) {
+
+            var origin = location.origin;
+            if ("browser" in window) {
+                origin = 'https://imzer.morin.io'
+            }
+
             var queryParams = L.Util.getParamString({
                 latitude: evt.latlng.lat,
                 longitude: evt.latlng.lng,
                 accuracy: evt.accuracy
             });
+
             a.dataset.clipboardText = L.Util.template(
                 '{origin}{pathname}{queryParams}',
-                Object.assign({queryParams: queryParams}, location)
+                Object.assign({}, location, {queryParams: queryParams, origin: origin})
             );
+
             a.removeAttribute('disabled');
         } else {
             a.setAttribute('disabled', '');
