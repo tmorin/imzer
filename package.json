@@ -16,6 +16,7 @@
   },
   "homepage": "https://gitlab.com/tmorin/imzer#readme",
   "devDependencies": {
+    "standard-version": "^4.4.0",
     "web-ext": "^2.9.1"
   },
   "webExt": {
