@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "/rc",
+    "public": "/public",
     "ignore": [],
     "rewrites": [
       {
