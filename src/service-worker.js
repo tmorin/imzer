@@ -1,4 +1,4 @@
-const APP_CACHE = 'APP-v2';
+const APP_CACHE = 'APP-v1.2.1';
 const TILES_CACHE = 'TILES-v1';
 
 self.addEventListener('install', function (event) {
