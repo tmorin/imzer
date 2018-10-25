@@ -1,8 +1,10 @@
 {
   "name": "imzer",
-  "version": "1.0.0-alpha.0",
+  "version": "1.1.0-alpha.0",
   "description": "imzer will help you to quickly share your location as well as to locate where the other guy is.",
-  "scripts": {},
+  "scripts": {
+    "web-ext": "web-ext run"
+  },
   "repository": {
     "type": "git",
     "url": "git+ssh://git@gitlab.com/tmorin/imzer.git"
@@ -12,5 +14,11 @@
   "bugs": {
     "url": "https://gitlab.com/tmorin/imzer/issues"
   },
-  "homepage": "https://gitlab.com/tmorin/imzer#readme"
+  "homepage": "https://gitlab.com/tmorin/imzer#readme",
+  "devDependencies": {
+    "web-ext": "^2.9.1"
+  },
+  "webExt": {
+    "sourceDir": "public"
+  }
 }
