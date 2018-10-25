@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.2.1"></a>
+## [1.2.1](https://gitlab.com/tmorin/imzer/compare/v1.2.0...v1.2.1) (2018-10-25)
+
+
+### Bug Fixes
+
+* the web app is not updated ([1a1f814](https://gitlab.com/tmorin/imzer/commit/1a1f814))
+
+
+
 <a name="1.2.0"></a>
 # 1.2.0 (2018-10-25)
 
