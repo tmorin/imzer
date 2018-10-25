@@ -36,6 +36,23 @@ body {
   opacity: 1;
 }
 
+.leaflet-control-action {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  .leaflet-control-label {
+    display: none;
+    margin-left: 0.5em;
+    background: rgba(10, 10, 10, 0.5);
+    color: rgba(255, 255, 255, 1);
+    padding: 0.5em;
+    border-radius: 0.5em;
+  }
+  &:hover .leaflet-control-label {
+    display: inline;
+  }
+}
+
 a.leaflet-control-button {
   display: flex;
   align-items: center;

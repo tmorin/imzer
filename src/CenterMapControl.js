@@ -7,7 +7,7 @@ Control.CenterMap = Control.extend({
     },
 
     onAdd() {
-        const container = DomUtil.create('div', 'leaflet-control-centermap');
+        const container = DomUtil.create('div', 'leaflet-control-centermap leaflet-control-action');
 
         const a = container.appendChild(
             DomUtil.create('a', 'leaflet-control-button')
@@ -30,6 +30,11 @@ Control.CenterMap = Control.extend({
                 this.startCenterMap();
             }
         }.bind(this));
+
+        const span = container.appendChild(
+            DomUtil.create('span', 'leaflet-control-label')
+        );
+        span.innerText = 'center the map';
 
         return container;
     },

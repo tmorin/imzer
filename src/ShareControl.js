@@ -8,7 +8,7 @@ Control.Share = Control.extend({
     },
 
     onAdd(map) {
-        const container = DomUtil.create('div', 'leaflet-control-share');
+        const container = DomUtil.create('div', 'leaflet-control-share leaflet-control-action');
 
         const a = container.appendChild(
             DomUtil.create('a', 'leaflet-control-button')
@@ -31,6 +31,11 @@ Control.Share = Control.extend({
             }
 
         });
+
+        const span = container.appendChild(
+            DomUtil.create('span', 'leaflet-control-label')
+        );
+        span.innerText = 'share my location';
 
         const clipboard = new ClipboardJS(a);
         clipboard.on('success', function () {

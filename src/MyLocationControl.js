@@ -7,7 +7,7 @@ Control.MyLocation = Control.extend({
     },
 
     onAdd() {
-        const container = DomUtil.create('div', 'leaflet-control-mylocation');
+        const container = DomUtil.create('div', 'leaflet-control-mylocation leaflet-control-action');
 
         const a = container.appendChild(
             DomUtil.create('a', 'leaflet-control-button')
@@ -30,6 +30,11 @@ Control.MyLocation = Control.extend({
                 this.startLocateMe();
             }
         }.bind(this));
+
+        const span = container.appendChild(
+            DomUtil.create('span', 'leaflet-control-label')
+        );
+        span.innerText = 'locate me';
 
         return container;
     },
