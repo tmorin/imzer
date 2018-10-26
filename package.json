@@ -7,8 +7,10 @@
     "b:watch": "webpack --config webpack.prod.js --watch",
     "s:watch": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "package": "rm -f imzer.zip && cd public && zip -r ../imzer.zip *",
-    "release": "standard-version"
+    "release": "standard-version -a",
+    "we:package": "web-ext lint && web-ext build",
+    "we:publish": "web-ext sign",
+    "fb:publish": "firebase --only hosting"
   },
   "repository": {
     "type": "git",
@@ -28,6 +30,12 @@
   "webExt": {
     "sourceDir": "public"
   },
+  "standard-version": {
+    "scripts": {
+      "postbump": "node ./scripts/postbump.js > postbump.log",
+      "precommit": "git add -A"
+    }
+  },
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-env": "^7.1.0",
@@ -38,6 +46,7 @@
     "copy-webpack-plugin": "^4.5.4",
     "css-loader": "^1.0.0",
     "file-loader": "^2.0.0",
+    "firebase-tools": "^6.0.0",
     "html-webpack-plugin": "^3.2.0",
     "leaflet": "^1.3.4",
     "mini-css-extract-plugin": "^0.4.4",

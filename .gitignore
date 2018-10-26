@@ -3,3 +3,4 @@ node_modules/
 .firebase/
 public/
 imzer.zip
+postbump.log
