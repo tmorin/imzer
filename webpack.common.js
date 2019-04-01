@@ -26,7 +26,7 @@ module.exports = {
         ]
     },
     plugins: [
-        new CleanWebpackPlugin('public'),
+        new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
             {from: 'src', force: true, ignore: ['*.js', '*.scss', '*.ejs']},
             {from: 'node_modules/leaflet/dist/images', to: 'images', force: true}
