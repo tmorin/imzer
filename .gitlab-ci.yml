@@ -24,7 +24,7 @@ publish_firebase:
   - tags
   script:
   - ls -l public
-  - npm run fb:publish -- --token "$FIREBASE_TOKEN"
+  - npm run fb:publish
 
 publish_firefox:
   image: node:10-alpine
@@ -33,4 +33,4 @@ publish_firefox:
   - tags
   script:
   - ls -l public
-  - npm run we:publish -- --api-key="$JWT_ISSUER" --api-secret="$JWT_SECRET"
+  - npm run we:publish || echo OK
