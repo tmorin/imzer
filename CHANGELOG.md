@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.4](https://gitlab.com/tmorin/imzer/compare/v1.2.3...v1.2.4) (2019-04-01)
+
+
+### Bug Fixes
+
+* website is not deployed ([3de3595](https://gitlab.com/tmorin/imzer/commit/3de3595))
+
+
+
 ## [1.2.3](https://gitlab.com/tmorin/imzer/compare/v1.2.2...v1.2.3) (2019-04-01)
 
 
