@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.3](https://gitlab.com/tmorin/imzer/compare/v1.2.2...v1.2.3) (2019-04-01)
+
+
+### Bug Fixes
+
+* auto geo localization should not be disabled when error is localization failed ([3c01b0e](https://gitlab.com/tmorin/imzer/commit/3c01b0e))
+
+
+
 <a name="1.2.2"></a>
 ## [1.2.2](https://gitlab.com/tmorin/imzer/compare/v1.2.1...v1.2.2) (2018-10-25)
 
