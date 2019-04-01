@@ -2,6 +2,7 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {GenerateSW} = require('workbox-webpack-plugin');
 const pkg = require('./package.json');
 
 module.exports = {
@@ -36,6 +37,12 @@ module.exports = {
             pkg: pkg,
             excludeChunks: ['background', 'service-worker'],
             hash: true
+        }),
+        new GenerateSW({
+            exclude: [
+                /background\.js$/,
+                /manifest\.json$/
+            ]
         })
     ]
 };

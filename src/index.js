@@ -1,6 +1,5 @@
 import './index.scss';
-import {map, tileLayer, control} from 'leaflet';
-
+import {control, map, tileLayer} from 'leaflet';
 import './MyLocationControl';
 import './CenterMapControl';
 import './ShareControl';
@@ -8,6 +7,10 @@ import './FlashMessageControl';
 import './OtherLocationInitializer';
 
 document.addEventListener('DOMContentLoaded', () => {
+
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('service-worker.js');
+    }
 
     const m = map('map', {
         center: [0, 0],
