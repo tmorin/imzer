@@ -110,7 +110,5 @@ Map.addInitHook(function () {
             latlng: undefined,
             accuracy: undefined
         });
-        // stop to watch
-        control.stopLocateMe();
     });
 });
