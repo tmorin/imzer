@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.3.0](https://gitlab.com/tmorin/imzer/compare/v1.2.5...v1.3.0) (2019-04-01)
+
+
+### Features
+
+* **PWA:** add app cache ([68e4460](https://gitlab.com/tmorin/imzer/commit/68e4460))
+
+
+
 ## [1.2.5](https://gitlab.com/tmorin/imzer/compare/v1.2.4...v1.2.5) (2019-04-01)
 
 
