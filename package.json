@@ -10,7 +10,7 @@
     "release": "standard-version -a",
     "we:package": "web-ext lint && web-ext build",
     "we:publish": "web-ext sign",
-    "fb:publish": "firebase --only hosting"
+    "fb:publish": "firebase deploy --only hosting"
   },
   "repository": {
     "type": "git",
