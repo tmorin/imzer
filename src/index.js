@@ -22,8 +22,9 @@ document.addEventListener('DOMContentLoaded', () => {
     tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {}).addTo(m);
 
     control.attribution()
-        .addAttribution('&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors')
+        .addAttribution('&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>')
         .addAttribution('<i class="fab fa-gitlab"></i> <a href="https://gitlab.com/tmorin/imzer" target="_blank">source code</a>')
+        .addAttribution(document.head.querySelector('meta[name="imzer-version"]').getAttribute('content'))
         .addTo(m);
 
     control.zoom({position: 'bottomright'}).addTo(m);
