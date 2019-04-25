@@ -25,15 +25,14 @@ body {
 .leaflet-control-flashmessage {
   background: rgba(10, 10, 10, 0.5);
   color: rgba(255, 255, 255, 1);
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 1rem;
-  font-size: 200%;
   opacity: 0;
   transition: opacity 1s;
 }
 
 .leaflet-control-flashmessage-opened {
-  opacity: 1;
+  opacity: 0.5;
 }
 
 .leaflet-control-action {
