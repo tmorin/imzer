@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.4.0](https://gitlab.com/tmorin/imzer/compare/v1.3.0...v1.4.0) (2019-04-25)
+
+
+### Bug Fixes
+
+* **ui:** increase opacity for the flash messages ([be5a917](https://gitlab.com/tmorin/imzer/commit/be5a917))
+* **ui:** localization was disabled after first error ([87708c1](https://gitlab.com/tmorin/imzer/commit/87708c1))
+
+
+### Features
+
+* **ui:** add the imzer version ([7fd5fb2](https://gitlab.com/tmorin/imzer/commit/7fd5fb2))
+
+
+
 # [1.3.0](https://gitlab.com/tmorin/imzer/compare/v1.2.5...v1.3.0) (2019-04-01)
 
 
