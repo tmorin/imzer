@@ -2,7 +2,7 @@ import {circle, Control, DomEvent, DomUtil, icon, Map, marker} from 'leaflet';
 
 Control.MyLocation = Control.extend({
     options: {
-        position: 'topleft',
+        position: 'bottomleft',
         timeout: 3000
     },
 
@@ -96,11 +96,7 @@ Map.addInitHook(function () {
     });
 
     this.on('locationerror', function (evt) {
-        // remove the pulsing state because watching is not working
-        DomUtil.removeClass(
-            control.getContainer().querySelector('a.leaflet-control-button'),
-            'leaflet-control-mylocation-started'
-        );
+        console.error(evt)
         // notify the geo localization is not working for the current device
         this.fire('flashmessage', {
             message: evt.message

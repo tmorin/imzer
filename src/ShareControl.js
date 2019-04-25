@@ -3,7 +3,7 @@ import {Control, DomEvent, DomUtil, Map, Util} from 'leaflet';
 
 Control.Share = Control.extend({
     options: {
-        position: 'topleft',
+        position: 'bottomleft',
         timeout: 3000
     },
 

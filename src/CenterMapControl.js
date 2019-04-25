@@ -2,7 +2,7 @@ import {Control, DomEvent, DomUtil, Map} from 'leaflet';
 
 Control.CenterMap = Control.extend({
     options: {
-        position: 'topleft',
+        position: 'bottomleft',
         timeout: 3000
     },
 
