@@ -1,11 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const {GenerateSW} = require('workbox-webpack-plugin');
 const pkg = require('./package.json');
 
 module.exports = {
+    target: 'web',
     entry: {
         'index': './src/index.js',
         'background': './src/background.js',
@@ -17,7 +18,7 @@ module.exports = {
     },
     module: {
         rules: [
-            {test: /\.js$/, exclude: /node_modules/, loader: ['babel-loader']},
+            {test: /\.m?js$/, exclude: /node_modules/, loader: 'babel-loader'},
             {test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=1000'},
             {test: /\.woff(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=1000&mimetype=application/font-woff'},
             {test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/, loader: 'url-loader?limit=1000&mimetype=application/font-woff'},
@@ -28,10 +29,16 @@ module.exports = {
     },
     plugins: [
         new CleanWebpackPlugin(),
-        new CopyWebpackPlugin([
-            {from: 'src', force: true, ignore: ['*.js', '*.scss', '*.ejs']},
-            {from: 'node_modules/leaflet/dist/images', to: 'images', force: true}
-        ]),
+        new CopyWebpackPlugin({
+            patterns: [
+                {
+                    from: 'src', force: true, globOptions: {
+                        ignore: ['**/*.js', '**/*.scss', '**/*.ejs']
+                    }
+                },
+                {from: 'node_modules/leaflet/dist/images', to: 'images', force: true}
+            ]
+        }),
         new HtmlWebpackPlugin({
             template: 'src/index.ejs',
             pkg: pkg,

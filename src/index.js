@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     control.attribution()
         .addAttribution('&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a>')
-        .addAttribution('<i class="fab fa-gitlab"></i> <a href="https://gitlab.com/tmorin/imzer" target="_blank">source code</a>')
+        .addAttribution('<i class="fab fa-github"></i> <a href="https://github.com/tmorin/imzer" target="_blank">source code</a>')
         .addAttribution(document.head.querySelector('meta[name="imzer-version"]').getAttribute('content'))
         .addTo(m);
 
