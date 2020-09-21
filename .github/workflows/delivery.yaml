@@ -24,11 +24,11 @@ jobs:
       - name: build web extension
         run: npm run we:build
       - name: publish web-app
-        run: npm run fb:publish
+        run: npm run wa:publish
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
       - name: publish web-extension
-        run: npm run we:package || echo OK
+        run: npm run we:publish || echo OK
         env:
           WEB_EXT_API_KEY: ${{ secrets.WEB_EXT_API_KEY }}
           WEB_EXT_API_SECRET: ${{ secrets.WEB_EXT_API_SECRET }}
