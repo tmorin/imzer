@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "imzer",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "imzer will help you to quickly share your location as well as to locate where the other guy is.",
   "icons": {
     "64": "icons/imzer-64.png",

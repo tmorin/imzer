@@ -1,6 +1,13 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [1.5.0](https://github.com/tmorin/imzer/compare/v1.4.0...v1.5.0) (2020-09-21)
+
+
+### Features
+
+* switch to github ([6925b02](https://github.com/tmorin/imzer/commit/6925b021adcdfbe81bd8877f193d5f18fa2c56f3))
 
 # [1.4.0](https://github.com/tmorin/imzer/compare/v1.3.0...v1.4.0) (2019-04-25)
 
