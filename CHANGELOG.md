@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/tmorin/imzer/compare/v1.5.0...v1.5.1) (2020-09-21)
+
+
+### Bug Fixes
+
+* fix delivery workflow ([ba83fdb](https://github.com/tmorin/imzer/commit/ba83fdb62b67ce88aa760d296f03fffe6e8d2f91))
+
 ## [1.5.0](https://github.com/tmorin/imzer/compare/v1.4.0...v1.5.0) (2020-09-21)
 
 
