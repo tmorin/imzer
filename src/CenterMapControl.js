@@ -55,6 +55,11 @@ Control.CenterMap = Control.extend({
     },
 
     centerMap() {
+        const a = this.getContainer().querySelector('a.leaflet-control-button');
+        if (a.disable) {
+            return;
+        }
+
         const started = DomUtil.hasClass(
             this.getContainer().querySelector('a.leaflet-control-button'),
             'leaflet-control-centermap-started'
@@ -72,18 +77,31 @@ Control.CenterMap = Control.extend({
             // when centering is not activated, center the view to the other location
             this._map.setView(this.otherlocation, 18);
         }
+    },
+
+    enable() {
+        const a = this.getContainer().querySelector('a.leaflet-control-button');
+        a.removeAttribute('disabled');
+    },
+
+    disable() {
+        const a = this.getContainer().querySelector('a.leaflet-control-button');
+        a.setAttribute('disabled', '');
     }
 });
 
 Map.addInitHook(function () {
     const control = new Control.CenterMap({}).addTo(this);
+    control.disable();
 
     this.on('mylocation', function (evt) {
+        control.enable();
         control.mylocation = evt.latlng;
         control.centerMap();
     });
 
     this.on('otherlocation', function (evt) {
+        control.enable();
         control.otherlocation = evt.latlng;
         control.centerMap();
     });
