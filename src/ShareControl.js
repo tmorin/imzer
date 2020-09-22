@@ -40,7 +40,7 @@ Control.Share = Control.extend({
         const clipboard = new ClipboardJS(a);
         clipboard.on('success', function () {
             map.fire('flashmessage', {
-                message: 'URL copied to clipboard!'
+                message: `URL copied to clipboard!<br>${a.dataset.clipboardText}`
             });
         });
 

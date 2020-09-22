@@ -22,6 +22,13 @@ body {
   min-width: 200px;
 }
 
+.leaflet-control-gettingstarted {
+  background: rgba(10, 10, 10, 0.5);
+  color: rgba(255, 255, 255, 1);
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
 .leaflet-control-flashmessage {
   background: rgba(10, 10, 10, 0.5);
   color: rgba(255, 255, 255, 1);
@@ -32,7 +39,7 @@ body {
 }
 
 .leaflet-control-flashmessage-opened {
-  opacity: 0.5;
+  opacity: 0.75;
 }
 
 .leaflet-control-action {
@@ -41,17 +48,14 @@ body {
   align-items: center;
 
   .leaflet-control-label {
-    display: none;
     margin-left: 0.5em;
     background: rgba(10, 10, 10, 0.5);
     color: rgba(255, 255, 255, 1);
     padding: 0.5em;
     border-radius: 0.5em;
-  }
-
-  &:hover .leaflet-control-label {
     display: inline;
   }
+
 }
 
 a.leaflet-control-button {
@@ -76,21 +80,27 @@ a.leaflet-control-button[disabled] {
   pointer-events: none;
 }
 
-a.leaflet-control-mylocation-started i, a.leaflet-control-centermap-started i {
-  animation: pulsate 1s ease-out;
-  animation-iteration-count: infinite;
+a.leaflet-control-mylocation-started, a.leaflet-control-centermap-started {
+  i {
+    animation: pulsate 2s ease-out;
+    animation-iteration-count: infinite;
+  }
+
+  &[disabled] i {
+    animation: none;
+  }
 }
 
 @keyframes pulsate {
   0% {
-    transform: scale(0.1, 0.1);
+    transform: scale(1.2, 1.2);
     opacity: 0.0;
   }
   50% {
     opacity: 1.0;
   }
   100% {
-    transform: scale(1.2, 1.2);
+    transform: scale(0.1, 0.1);
     opacity: 0.0;
   }
 }

@@ -3,7 +3,7 @@ import {Control, DomUtil, Map} from 'leaflet';
 Control.FlashMessage = Control.extend({
     options: {
         position: 'topright',
-        timeout: 3000
+        timeout: 5000
     },
 
     onAdd() {
@@ -20,7 +20,7 @@ Control.FlashMessage = Control.extend({
 
     flash(message) {
         this._timeoutId = setTimeout(this.close.bind(this), this.options.timeout || 3000);
-        this.getContainer().textContent = message;
+        this.getContainer().innerHTML = message;
         DomUtil.addClass(this.getContainer(), 'leaflet-control-flashmessage-opened');
     }
 });
