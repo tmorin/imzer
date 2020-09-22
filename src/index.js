@@ -1,8 +1,8 @@
 import './index.scss';
 import {control, map, tileLayer} from 'leaflet';
-import './MyLocationControl';
 import './CenterMapControl';
 import './ShareControl';
+import './MyLocationControl';
 import './FlashMessageControl';
 import './OtherLocationInitializer';
 
