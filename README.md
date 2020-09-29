@@ -16,6 +16,7 @@ npm run wa:build
 
 Build the web-extension
 ```shell script
+npm run wa:build
 npm run we:build
 ```
 
