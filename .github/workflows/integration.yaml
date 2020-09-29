@@ -16,9 +16,16 @@ jobs:
           node-version: '12.x'
           registry-url: 'https://registry.npmjs.org'
           scope: '@tmorin'
-      - name: install dependencies
+      - name: Install dependencies
         run: npm ci
-      - name: build web-app
+      - name: Build web-application
         run: npm run wa:build
-      - name: build web extension
+      - name: Build web-extention
         run: npm run we:build
+      - name: Pack Source code
+        run: tar -cvf public/source.tar.gz src scripts .firebaserc .gitignore LICENSE *.json *.md *.js
+      - name: Upload web-application
+        uses: actions/upload-artifact@v2
+        with:
+          name: web-application
+          path: public
