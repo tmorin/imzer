@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/tmorin/imzer/compare/v1.6.0...v1.7.0) (2020-09-29)
+
+
+### Features
+
+* include the source code in the package ([719805a](https://github.com/tmorin/imzer/commit/719805a9b1540c1b1e7a60985280f7bc7e964149))
+
 ## [1.6.0](https://github.com/tmorin/imzer/compare/v1.5.1...v1.6.0) (2020-09-22)
 
 
