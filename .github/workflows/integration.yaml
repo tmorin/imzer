@@ -23,7 +23,7 @@ jobs:
       - name: Build web-extention
         run: npm run we:build
       - name: Pack Source code
-        run: tar -cvf public/source.tar.gz src scripts .firebaserc .gitignore LICENSE *.json *.md *.js
+        run: zip -r public/source.zip src scripts .firebaserc .gitignore LICENSE *.json *.md *.js
       - name: Upload web-application
         uses: actions/upload-artifact@v2
         with:
